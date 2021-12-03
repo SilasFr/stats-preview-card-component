@@ -76,6 +76,13 @@ p {
   font-weight: 400;
   font-size: 15px;
 }
+.statistics{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
 .statistic-one p {
   text-align: center;
@@ -116,4 +123,56 @@ h2.highlight-statistic {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:600px){
+
+  body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 0;
+
+    height: 40vh;
+  }
+
+  .card-img{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 8px;
+
+  }
+
+  .opacity{
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 8px;
+
+
+  }
+
+  .card-info{
+    height: 100%;
+    gap: 10%;
+
+    grid-column: 1/2;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .statistics{
+    display: flex;
+    flex-direction: row;
+  }
 }
